@@ -78,6 +78,23 @@ h3 {
   font-size: 1rem;
 }
 
+h2::before {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  margin: 0.25em 0 0 0;
+  content: "";
+  margin-left: 0px;
+}
+
+h2::after {
+  position: absolute;
+  width: 100%;
+  margin: 0.85em 0 0 15px;
+  content: "";
+  border-bottom: 3px solid #df8a13;
+}
+
 a {
   color: #165690;
 }
@@ -122,44 +139,52 @@ a:hover, a:focus {
   margin-bottom: 60px;
 }
 
-.new-films {
-  margin-bottom: 80px;
+.new-films,
+.top-week {
   position: relative;
   overflow: hidden;
+  margin-bottom: 80px;
 }
-.new-films-title::after {
+.new-films-title::after,
+.top-week-title::after {
   position: absolute;
-  content: "";
   width: 100%;
+  content: "";
   border-bottom: 3px solid #f0ad4f;
 }
-.new-films-row {
+.new-films-row,
+.top-week-row {
   margin-right: -7.5px;
   margin-bottom: -15px;
   margin-left: -7.5px;
 }
-.new-films-item {
+.new-films-item,
+.top-week-item {
   margin-bottom: 15px;
   padding-right: 7.5px;
   padding-left: 7.5px;
 }
-.new-films-item:hover h3 {
+.new-films-item:hover h3,
+.top-week-item:hover h3 {
   color: #ffffff;
 }
-.new-films-item__title {
+.new-films-item__title,
+.top-week-item__title {
   margin: 0;
   text-align: center;
   font-weight: bold;
 }
-.new-films-item__thumbnail {
-  margin-bottom: 0;
+.new-films-item__thumbnail,
+.top-week-item__thumbnail {
   display: block;
-  border-radius: 4px;
+  margin-bottom: 0;
   -webkit-transition: background-color 0.25s;
   -o-transition: background-color 0.25s;
   transition: background-color 0.25s;
+  border-radius: 4px;
 }
-.new-films-item__thumbnail:hover {
+.new-films-item__thumbnail:hover,
+.top-week-item__thumbnail:hover {
   border-color: #df8a13;
   background-color: #df8a13;
 }
@@ -291,7 +316,8 @@ a:hover, a:focus {
   .header-logo__title {
     font-size: 3.5rem;
   }
-  .new-films-title::after {
+  .new-films-title::after,
+.top-week-title::after {
     margin: 2.55rem 0 0 15px;
   }
 }
@@ -307,7 +333,8 @@ a:hover, a:focus {
   }
 }
 @media (max-width: 1199.8px) {
-  .new-films-item__image {
+  .new-films-item__image,
+.top-week-item__image {
     width: 100%;
   }
 }
@@ -324,13 +351,14 @@ a:hover, a:focus {
 }
 @media (max-width: 575.8px) {
   h1 {
-    font-size: 2rem;
     margin: 0 0 1em 0;
+    font-size: 2rem;
   }
   .header-logo__title {
     font-size: 2.5rem;
   }
-  .new-films-title::after {
+  .new-films-title::after,
+.top-week-title::after {
     margin: 1.7rem 0 0 15px;
   }
 }

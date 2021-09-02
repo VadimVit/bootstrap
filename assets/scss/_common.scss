@@ -31,6 +31,25 @@ h3 {
   font-size: 1rem;
 }
 
+h2::before {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  margin: 0.25em 0 0 0;
+  content: "";
+  margin-left: 0px;
+
+
+}
+
+h2::after {
+    position: absolute;
+    width: 100%;
+    margin: 0.85em 0 0 15px;
+    content: "";
+    border-bottom: 3px solid $color-accent;
+  }
+
 a {
   color: $color-primary;
 
